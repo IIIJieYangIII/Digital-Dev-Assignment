@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <meta charset="utf-8">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+  
+  <title>JIE YANG</title>
+<style id="jsbin-css">
+*
+{
+	-moz-font-smoothing:antialiased;
+	-moz-text-size-adjust:100%;
+	-ms-font-smoothing:antialiased;
+	-ms-text-size-adjust:100%;
+	-webkit-font-smoothing:antialiased;
+	-webkit-text-size-adjust:100%;
+	margin:0;
+	padding:0;
+}
+
+*,:before,:after
+{
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+
+  20% {
+    transform: translateX=Y(-10px);
+  }
+
+  40% {
+    transform: translateX(10px);
+  }
+
+  60% {
+    transform: translateY(-10px);
+  }
+
+  80% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+html,body
+{
+	color:#fff;
+    font-family: 'Roboto', sans-serif;
+    height:100%;
+	text-align:center;
+	text-shadow:1px 1px 1px rgba(0,0,0,.5);
+	width:100%;
+}
+
+.blur{   background:url('https://raw.githubusercontent.com/IIIJieYangIII/Digital-Dev-Assignment/master/Asignment%203-%20HTML%3ACSS/IMG_227.jpg') no-repeat center;
+    background-size:cover;
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px);
+    position:absolute;
+    width:100%;
+    height:100%;
+}
+
+.blur:hover{
+  
+}
+.content
+{
+    margin:10% 10%;
+  	vertical-align:middle;
+	max-width:350px;
+    max-height:500px;
+	padding:50px;
+    /* opacity:.6; */
+    border-radius: 12px;  /* info: */
+    background-color: rgba(55, 55, 55, .8);
+    position:relative;
+    position:absolute;
+    z-index:9999;
+    -webkit-filter: blur(0px);
+    -moz-filter: blur(0px);
+    -o-filter: blur(0px);
+    -ms-filter: blur(13px);
+    filter: blur(0px);
+}
+
+
+h1
+{
+  font-weight: 300;
+  font-size: 36px;
+  color: #FFFFFF;
+  line-height: 42px;
+}
+
+h5
+{
+  font-weight:300;
+  color: #FFFFFF;
+  letter-spacing: 2px;
+  line-height: 22px;
+  text-shadow: 0px 1px 2px rgba(0,0,0,0.30);
+  text-transform:uppercase;
+}
+
+p
+{
+  font-weight:300;
+  font-size: 16px;
+  color: #FFFFFF;
+  line-height: 24px;
+  width:290px;
+  position: relative;
+  right:20px;
+}
+
+.imgContainer
+{
+	-moz-box-shadow:0 0 3px 1px rgba(0,0,0,0.5);
+	-webkit-border-radius:50%;
+	-webkit-box-shadow:0 0 3px 1px rgba(0,0,0,0.5);
+	background-color:#fff;
+	border-radius:50%;
+	box-shadow:0 0 3px 1px rgba(0,0,0,0.5);
+	height:100px;
+	margin:10px auto;
+	padding:4px;
+	width:100px;
+  	transition: transform 0.2s;
+    animation: shake 0.1s ease-in-out infinite;
+}
+
+.imgContainer:hover{
+  animation: skake 1s ease-in-out
+}
+
+.circleImg
+{
+	-webkit-border-radius:50%;
+	background-image:url(https://raw.githubusercontent.com/IIIJieYangIII/Digital-Dev-Assignment/master/Asignment%203-%20HTML%3ACSS/Jie%20copy.jpg);
+	background-position:40% 50%;
+	background-repeat:no-repeat;
+	background-size:100%;
+	border-radius:50%;
+	height:100%;
+	width:100%;
+  	transition:all .15s ease-out;
+}
+  
+.circleImg:hover{
+  background-image:url(https://31.media.tumblr.com/fb174c55cf3470a2e17cdb5c6e5d1558/tumblr_n6xl4kBDbB1tzlc6mo1_500.gif);
+  background-position:center center;
+  background-size:300%;
+}
+
+
+.hr-long
+{   
+    border: 1px solid #FFFFFF;
+	margin:15px auto;
+	opacity:.3;
+	width:100%;
+} 
+
+.hr-short
+{
+    border: 1px solid #FFFFFF;
+	margin:15px auto;
+	opacity:.3;
+	width:100%;
+}
+
+ul
+{
+	list-style:none;
+}
+
+ul li
+{
+	display:inline-block;
+	margin:15px 10px;
+}
+
+.icon
+{
+	-webkit-transition:all .15s ease-out;
+	background-position:top left;
+	background-repeat:no-repeat;
+	opacity:.7;
+	transition:all .15s ease-out;
+    height:32px;
+	width:32px;
+}
+  
+.icon:hover
+{
+    opacity:1;	
+	-ms-transform: rotate(720deg); /* IE 9 */
+    -webkit-transform: rotate(720deg); /* Chrome, Safari, Opera */
+    transform: rotate(720deg);
+}
+
+.linkedin
+{
+	background-image:url(https://raw.githubusercontent.com/IIIJieYangIII/Digital-Dev-Assignment/master/Asignment%203-%20HTML%3ACSS/1443106031_linkedin.png);
+  background-size:100% 100%;
+  
+}
+
+.behance
+{
+	background-image:url(https://raw.githubusercontent.com/IIIJieYangIII/Digital-Dev-Assignment/master/Asignment%203-%20HTML%3ACSS/1443106683_behance.png);
+  background-size:100% 100%;
+}
+
+.email
+{
+	background-image:url(https://raw.githubusercontent.com/IIIJieYangIII/Digital-Dev-Assignment/master/Asignment%203-%20HTML%3ACSS/1443106568_gmail.png);
+    background-size:100% 100%;
+}
+</style>
+</head>
+  
+<body>
+  <div class="bigImage">
+    <div class="blur"></div>
+    <div class="content">
+       <div class='imgContainer'>
+        <div class="circleImg"></div>
+       </div>
+        <h1>JIE YANG</h1>
+        <h5>Industrial+Interaction</h5>
+        <hr class="hr-long" />
+        <p>Hi, I’m Jie. I am a user-centered designer with a background in industrial design. I’m interested in understanding users, uncovering insight and imagining the better future.</p>
+        <hr class="hr-short" />
+         
+         <ul>
+            <li>
+              <a target="_blank" href="https://www.linkedin.com/in/jieyangdesign">
+              <div class="icon linkedin"></div>
+              </a>
+            </li>
+           
+            <li>
+              <a href="http://jieyang.design">
+              <div class="icon behance"></div>
+              </a>
+            </li>
+           
+            <li>
+              <a href="mailto:jieydesign@gmail.com">
+              <div class="icon email"></div>
+              </a>
+            </li>
+         </ul>
+     </div>
+  </div>
+
+
+<script id="jsbin-source-css" type="text/css">*
+{
+	-moz-font-smoothing:antialiased;
+	-moz-text-size-adjust:100%;
+	-ms-font-smoothing:antialiased;
+	-ms-text-size-adjust:100%;
+	-webkit-font-smoothing:antialiased;
+	-webkit-text-size-adjust:100%;
+	margin:0;
+	padding:0;
+}
+
+*,:before,:after
+{
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+
+  20% {
+    transform: translateX=Y(-10px);
+  }
+
+  40% {
+    transform: translateX(10px);
+  }
+
+  60% {
+    transform: translateY(-10px);
+  }
+
+  80% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+html,body
+{
+	color:#fff;
+    font-family: 'Roboto', sans-serif;
+    height:100%;
+	text-align:center;
+	text-shadow:1px 1px 1px rgba(0,0,0,.5);
+	width:100%;
+}
+
+.blur{   background:url('https://raw.githubusercontent.com/IIIJieYangIII/Digital-Dev-Assignment/master/Asignment%203-%20HTML%3ACSS/IMG_227.jpg') no-repeat center;
+    background-size:cover;
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px);
+    position:absolute;
+    width:100%;
+    height:100%;
+}
+
+.blur:hover{
+  
+}
+.content
+{
+    margin:10% 10%;
+  	vertical-align:middle;
+	max-width:350px;
+    max-height:500px;
+	padding:50px;
+    /* opacity:.6; */
+    border-radius: 12px;  /* info: */
+    background-color: rgba(55, 55, 55, .8);
+    position:relative;
+    position:absolute;
+    z-index:9999;
+    -webkit-filter: blur(0px);
+    -moz-filter: blur(0px);
+    -o-filter: blur(0px);
+    -ms-filter: blur(13px);
+    filter: blur(0px);
+}
+
+
+h1
+{
+  font-weight: 300;
+  font-size: 36px;
+  color: #FFFFFF;
+  line-height: 42px;
+}
+
+h5
+{
+  font-weight:300;
+  color: #FFFFFF;
+  letter-spacing: 2px;
+  line-height: 22px;
+  text-shadow: 0px 1px 2px rgba(0,0,0,0.30);
+  text-transform:uppercase;
+}
+
+p
+{
+  font-weight:300;
+  font-size: 16px;
+  color: #FFFFFF;
+  line-height: 24px;
+  width:290px;
+  position: relative;
+  right:20px;
+}
+
+.imgContainer
+{
+	-moz-box-shadow:0 0 3px 1px rgba(0,0,0,0.5);
+	-webkit-border-radius:50%;
+	-webkit-box-shadow:0 0 3px 1px rgba(0,0,0,0.5);
+	background-color:#fff;
+	border-radius:50%;
+	box-shadow:0 0 3px 1px rgba(0,0,0,0.5);
+	height:100px;
+	margin:10px auto;
+	padding:4px;
+	width:100px;
+  	transition: transform 0.2s;
+    animation: shake 0.1s ease-in-out infinite;
+}
+
+.imgContainer:hover{
+  animation: skake 1s ease-in-out
+}
+
+.circleImg
+{
+	-webkit-border-radius:50%;
+	background-image:url(https://raw.githubusercontent.com/IIIJieYangIII/Digital-Dev-Assignment/master/Asignment%203-%20HTML%3ACSS/Jie%20copy.jpg);
+	background-position:40% 50%;
+	background-repeat:no-repeat;
+	background-size:100%;
+	border-radius:50%;
+	height:100%;
+	width:100%;
+  	transition:all .15s ease-out;
+}
+  
+.circleImg:hover{
+  background-image:url(https://31.media.tumblr.com/fb174c55cf3470a2e17cdb5c6e5d1558/tumblr_n6xl4kBDbB1tzlc6mo1_500.gif);
+  background-position:center center;
+  background-size:300%;
+}
+
+
+.hr-long
+{   
+    border: 1px solid #FFFFFF;
+	margin:15px auto;
+	opacity:.3;
+	width:100%;
+} 
+
+.hr-short
+{
+    border: 1px solid #FFFFFF;
+	margin:15px auto;
+	opacity:.3;
+	width:100%;
+}
+
+ul
+{
+	list-style:none;
+}
+
+ul li
+{
+	display:inline-block;
+	margin:15px 10px;
+}
+
+.icon
+{
+	-webkit-transition:all .15s ease-out;
+	background-position:top left;
+	background-repeat:no-repeat;
+	opacity:.7;
+	transition:all .15s ease-out;
+    height:32px;
+	width:32px;
+}
+  
+.icon:hover
+{
+    opacity:1;	
+	-ms-transform: rotate(720deg); /* IE 9 */
+    -webkit-transform: rotate(720deg); /* Chrome, Safari, Opera */
+    transform: rotate(720deg);
+}
+
+.linkedin
+{
+	background-image:url(https://raw.githubusercontent.com/IIIJieYangIII/Digital-Dev-Assignment/master/Asignment%203-%20HTML%3ACSS/1443106031_linkedin.png);
+  background-size:100% 100%;
+  
+}
+
+.behance
+{
+	background-image:url(https://raw.githubusercontent.com/IIIJieYangIII/Digital-Dev-Assignment/master/Asignment%203-%20HTML%3ACSS/1443106683_behance.png);
+  background-size:100% 100%;
+}
+
+.email
+{
+	background-image:url(https://raw.githubusercontent.com/IIIJieYangIII/Digital-Dev-Assignment/master/Asignment%203-%20HTML%3ACSS/1443106568_gmail.png);
+    background-size:100% 100%;
+}
+
+</script>
+</body>
+</html>
